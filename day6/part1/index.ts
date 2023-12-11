@@ -21,6 +21,7 @@ function speed(speed: number, max: number): number {
 function errorRate(time: number, record: number): number {
   let count = 0;
   for (let i = 0; i < time; i++) {
+    // console.log(`${time} ${record} ${speed(i, time - i)}`);
     if (speed(i, time - i) > record) {
       count++;
     }
